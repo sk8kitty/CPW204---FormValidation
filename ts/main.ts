@@ -14,9 +14,7 @@ function main():void {
  * @param errMsg The message to display in the sibling span element of the given textbox.
  */
 function isTextPresent(id:string, errMsg:string):boolean {
-    // i made this look a little different because i wanted the error message to
-    // disappear when "register" is clicked and there is text within the given textbox
-
+    // i decided to leave this as is instead of creating a separate function to handle error messages because it feels simpler
     let txtBox = <HTMLInputElement>document.getElementById(id);
     let txtBoxValue = txtBox.value;
     let errSpan = <HTMLElement>txtBox.nextElementSibling;
